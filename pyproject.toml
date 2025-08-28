@@ -1,0 +1,32 @@
+[build-system]
+requires = ["setuptools>=64", "wheel"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "numba-lapack"                      
+version = "0.1.0"
+description = "UNSAFE Numba intrinsics for BLAS/LAPACK via SciPy C-API"
+readme = "README.md"
+requires-python = ">=3.9"
+license = { text = "BSD-3-Clause" }
+authors = [{ name = "Mikołaj Tadeusz Żychowicz" }]
+dependencies = [
+  "numpy>=1.24",
+  "scipy>=1.10",
+  "numba>=0.59",
+  "llvmlite>=0.42",
+]
+
+[project.urls]
+Homepage = "https://github.com/yourname/numba-lapack"
+Issues = "https://github.com/yourname/numba-lapack/issues"
+
+[tool.setuptools]
+package-dir = {"" = "src"}
+
+[tool.setuptools.packages.find]
+where = ["src"]
+include = ["numba_lapack*"]
+
+[tool.setuptools.package-data]
+numba_lapack = ["*.pyi"]
