@@ -1,3 +1,12 @@
+<p align="center">
+  <picture>
+    <source srcset="https://raw.githubusercontent.com/MTZ-dev/numba-lapack/main/docs/_static/logo.svg" type="image/svg+xml">
+    <img src="https://raw.githubusercontent.com/MTZ-dev/numba-lapack/main/docs/_static/logo.png"
+         alt="numba-lapack"
+         width="180">
+  </picture>
+</p>
+
 # numba-lapack
 
 UNSAFE, zero-overhead Numba intrinsics that expose the full BLAS/LAPACK C-APIs

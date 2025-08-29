@@ -1,5 +1,5 @@
 [build-system]
-requires = ["setuptools>=64", "wheel"]
+requires = ["setuptools>=77", "wheel"]
 build-backend = "setuptools.build_meta"
 
 [project]
@@ -8,8 +8,14 @@ version = "0.1.0"
 description = "UNSAFE Numba intrinsics for BLAS/LAPACK via SciPy C-API"
 readme = "README.md"
 requires-python = ">=3.9"
-license = { text = "BSD-3-Clause" }
+license = "BSD-3-Clause"
+license-files = ["LICENSE"]
 authors = [{ name = "Mikołaj Tadeusz Żychowicz" }]
+keywords = ["numba", "blas", "lapack", "scipy", "jit"]
+classifiers = [
+  "Programming Language :: Python :: 3",
+  "Operating System :: OS Independent",
+]
 dependencies = [
   "numpy>=1.24",
   "scipy>=1.10",
@@ -18,15 +24,9 @@ dependencies = [
 ]
 
 [project.urls]
-Homepage = "https://github.com/yourname/numba-lapack"
-Issues = "https://github.com/yourname/numba-lapack/issues"
+Homepage = "https://github.com/MTZ-dev/numba-lapack"
+Issues = "https://github.com/MTZ-dev/numba-lapack/issues"
 
 [tool.setuptools]
-package-dir = {"" = "src"}
-
-[tool.setuptools.packages.find]
-where = ["src"]
-include = ["numba_lapack*"]
-
-[tool.setuptools.package-data]
-numba_lapack = ["*.pyi"]
+py-modules = ["numba_lapack"]
+include-package-data = true
